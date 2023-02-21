@@ -1,5 +1,7 @@
+import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
-
+import { Home, Profile} from "./index";
 
 const Navbar = () => {
   return (
@@ -15,8 +17,17 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon">"Toggle icon"</span>
         </button>
+        
+        
+        {/* Navigation Links */}
+        <section>
+          <Link to='/home'>Home</Link>
+          <Link to='/home'>Explore</Link>
+          <Link to='/profile'>Profile</Link> {/* this would be unique username */}
+
+        </section>
       </nav>
     </div>
   );
