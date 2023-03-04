@@ -7,13 +7,11 @@ module.exports = {
   },
   entry: './src/index.tsx',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, '/public'), // update output path to dist folder
     filename: 'bundle.js',
   },
   devServer: {
-    static: {
-      directory: path.resolve(__dirname, 'dist'),
-    },
+    contentBase: path.resolve(__dirname, './public'),
     port: 3000,
     open: true,
     hot: true,

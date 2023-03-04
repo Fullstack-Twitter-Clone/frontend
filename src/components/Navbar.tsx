@@ -24,7 +24,7 @@ const Navbar = () => {
         {/* Navigation Links */}
         <section>
           <Link to='/home'>Home</Link>
-          <Link to='/home'>Explore</Link>
+          <Link to='/explore'>Explore</Link>
           <Link to='/profile'>Profile</Link> {/* this would be unique username */}
 
         </section>
