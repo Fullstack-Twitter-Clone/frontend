@@ -7,7 +7,7 @@ module.exports = {
   },
   entry: './src/index.tsx',
   output: {
-    path: path.join(__dirname, '/public'), // update output path to dist folder
+    path: path.join(__dirname, './public'), // update output path to dist folder
     filename: 'bundle.js',
   },
   devServer: {
@@ -22,12 +22,12 @@ module.exports = {
     rules: [
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, './src'),
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.tsx?$/,
-        include: path.resolve(__dirname, 'src'),
+        include: path.resolve(__dirname, './src'),
         use: {
           loader: 'babel-loader',
           options: {
